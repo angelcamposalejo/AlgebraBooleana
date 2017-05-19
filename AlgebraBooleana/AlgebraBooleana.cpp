@@ -13,10 +13,10 @@ void AlgebraBooleana::Window_Open(Win::Event& e)
 
 void AlgebraBooleana::btRevisar_Click(Win::Event& e)
 {
-	const int edad = tbxEdad.IntValue;
-	bool mayorEdad = (edad >= 18);
+	const double costo = tbxCosto.DoubleValue;
+	bool puedeComprar = (costo < 20000);
 	wstring texto;
-	Sys::Format(texto, L"El niño es mayor de edad: %d", mayorEdad);
-	this->MessageBox(texto, L"1 para mayor de edad 0 para menor de edad", MB_OK);
+	Sys::Format(texto, L"Puede comprar el auto: %d", puedeComprar);
+	this->MessageBox(texto, L"1 para si puede comprarlo 0 para si no puede comprarlo", MB_OK);
 }
 
