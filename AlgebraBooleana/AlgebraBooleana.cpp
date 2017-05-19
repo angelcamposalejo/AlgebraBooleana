@@ -13,8 +13,9 @@ void AlgebraBooleana::Window_Open(Win::Event& e)
 
 void AlgebraBooleana::btRevisar_Click(Win::Event& e)
 {
-	const int par = tbxPar.IntValue;
-	const bool esPar = (par% 2 == 0);
-	this->Text = Sys::Convert::ToString(esPar);
+	const int edad = tbxEdad.IntValue;
+	const double peso = tbxPeso.DoubleValue;
+	const bool gratis = ((edad <= 11) && (peso < 50.0));
+	tbxAdmision.Text = Sys::Convert::ToString(gratis);
 }
 
